@@ -1,13 +1,312 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+    background: rgba(220, 220, 220, 0.7);
+    height: 100vh;
 }
+
+
+.container{
+    max-width: 370px;
+    margin: 50px auto 0;
+}
+.home-title{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+/*nav*/
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: darkblue;
+}
+.nav__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item + .nav__item{
+    margin-left: 30px;
+}
+.nav__item{
+    background: royalblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+.nav__item:hover{
+    background: blue;
+}
+.nav__item_active{
+    background: blue;
+    box-shadow: 3px 3px 5px;
+}
+.nav__link{
+    display: inline-block;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    color:white;
+}
+/*nav*/
+
+
+/*search*/
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.search__form{
+    flex-basis: 300px;
+    display: flex;
+    align-items: center;
+    border: 1px gray solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.search__input{
+    flex-basis: 270px;
+    padding: 5px 2px;
+    border: none;
+    font-size: 20px;
+    background: none;
+}
+.search__input:focus{
+    outline: none;
+}
+.search__btn{
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 5px;
+    background: rgb(0, 128, 128);
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.search__btn:hover{
+    background: lightseagreen;
+}
+.search__btn:active{
+    background: rgb(0, 128, 128);
+}
+/*search*/
+
+
+/*weather-card card*/
+.error, .loading{
+    margin-top: 70px;
+}
+.error, .loading{
+    text-align: center;
+    font-size: 36px;
+}
+.error__text{
+    margin-top: 30px;
+}
+.card{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.card-container{
+    flex-basis: 100%;
+    /*height: 280px;*/
+    border: 2px grey solid;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card__flex-container{
+    margin: 10px -15px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #00c6fb, #005bea);
+}
+.card__location{
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+}
+.card__city{
+    font-weight: 500;
+}
+.card__5-day{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.card__5-day a{
+    color: black;
+}
+.card__5-day a:hover{
+    color:darkblue;
+}
+.card__temp-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__temp{
+    padding-left: 10px;
+}
+.card__temp-feels-like{
+    margin-top: 5px;
+}
+.card__icon{
+    padding-right: 10px;
+}
+.card__temp{
+    font-size: 34px;
+}
+.card__description, .card__wind{
+    text-align: center;
+}
+.card__description{
+    font-size: 24px;
+    font-weight: 400;
+}
+.card__wind{
+    margin-top: 10px;
+}
+.card__btn{
+    display: block;
+    margin: 10px auto 0;
+}
+.btn__add{
+    font-size: 18px;
+    padding: 5px 10px;
+    background: rgb(0, 128, 128);
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.btn__add:hover{
+    background: lightseagreen;
+}
+.btn__add:active{
+    background: rgb(0, 128, 128);
+}
+/*weather-card card*/
+
+
+/*weather*/
+.weather{
+    margin-top: 30px;
+}
+.weather__title{
+
+}
+.weather__location, .weather__current-time{
+    text-align: center;
+}
+.weather__location{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.weather__current-time{
+    margin-top: 15px;
+}
+.weather__list{
+    display: flex;
+    max-width: 880px;
+    gap: 30px 26px;
+    justify-content: left;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 30px auto 0;
+}
+.weather__list-item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: lightblue;
+    border-radius: 3px;
+    padding: 10px;
+    border: 1px gray solid;
+}
+.weather__list-info{
+    text-align: center;
+}
+.weather__list-info + .weather__list-info{
+    margin-top: 8px;
+}
+.nav-weather{
+    background: none;
+}
+.weather__temp{
+    font-size: 20px;
+    font-weight: 500;
+}
+/*weather*/
+
+
+/*selected*/
+.selected__ul{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 50px auto 0;
+    flex-wrap: wrap;
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 10px;
+    /*gap: 30px 37px;*/
+    /*align-items: stretch;*/
+}
+.selected__li {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    transition: background-color .3s;
+}
+.selected__li:hover{
+    background: lightblue;
+}
+.selected__link{
+    padding: 8px 0;
+    width: 100%;
+    text-decoration-line: none;
+    font-size: 20px;
+    color: black;
+}
+.btn__remove{
+    padding: 5px 15px;
+    font-size: 20px;
+    border: none;
+    background: indianred;
+    transition: background-color .3s;
+}
+.btn__remove:hover{
+    background: darkred;
+}
+.selected__empty-value{
+    text-align: center;
+    font-size: 36px;
+    margin-top: 70px;
+}
+/*selected*/
