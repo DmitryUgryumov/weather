@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import WeatherCard from "../Weather/WeatherCard";
 
-
 const cities = [
   'London',
   'New York',
@@ -15,19 +14,16 @@ const cities = [
   'Barcelona'
 ]
 
-
 const Home = ({ apiKey }) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [cityInfo, setCityInfo] = useState(null);
-
 
   useEffect(() => {
     const randCitiesIndex = Math.floor(Math.random() * cities.length)
 
     weatherRequest(cities[randCitiesIndex])
   }, [])
-
 
   function weatherRequest(cityName) {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=en&appid=${apiKey}`
@@ -49,7 +45,6 @@ const Home = ({ apiKey }) => {
         setError(err)
       })
   }
-
 
   if (error) {
     return (
@@ -73,6 +68,5 @@ const Home = ({ apiKey }) => {
     );
   }
 };
-
 
 export default Home;

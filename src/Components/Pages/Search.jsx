@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import WeatherCard from "../Weather/WeatherCard";
 import SearchForm from "../Search/SearchForm";
 
-
 const Search = ({ apiKey }) => {
   const [error, setError] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -15,7 +14,6 @@ const Search = ({ apiKey }) => {
   const searchForm = <SearchForm weatherRequest={weatherRequest} error={error} setError={setError}
                                  setIsLoaded={setIsLoaded} isLoaded={isLoaded} setCityInfo={setCityInfo}
                                  setIsRequested={setIsRequested}/>
-
 
   function weatherRequest(cityName) {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=en&appid=${apiKey}`
@@ -39,7 +37,6 @@ const Search = ({ apiKey }) => {
         setIsRequested(true)
       })
   }
-
 
   if (cityInfo || isRequested){
     if (error) {
@@ -72,6 +69,5 @@ const Search = ({ apiKey }) => {
     )
   }
 };
-
 
 export default Search;

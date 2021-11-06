@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from "react-router-dom";
 
-
 const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) => {
   const [inputValue, setInputValue] = useState('')
   const hist = useHistory()
   const currentURL = useParams()
   const current = currentURL.cityName
-
 
   useEffect(() => {
     const city = current.replace('city=', '')
@@ -21,7 +19,6 @@ const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) =
       setCityInfo(null)
     }
   }, [current])
-
 
   function searchCity(e) {
     e.preventDefault()
@@ -42,6 +39,5 @@ const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) =
     </div>
   )
 }
-
 
 export default SearchForm;

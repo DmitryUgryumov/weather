@@ -2,12 +2,10 @@ import React, { useContext } from 'react';
 import Context from "../Context/Context";
 import { Link } from "react-router-dom";
 
-
 const WeatherCard = (props) => {
   const { addCity, selectedCity } = useContext(Context)
   const isSelected = selectedCity.includes(props.cityName)
   const icon = `https://openweathermap.org/img/wn/${props.icon}@2x.png`
-
 
   return (
     <div className='weather-card card'>
@@ -44,6 +42,5 @@ const WeatherCard = (props) => {
     </div>
   )
 }
-
 
 export default WeatherCard;

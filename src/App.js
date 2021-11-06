@@ -15,11 +15,9 @@ function App() {
     ? JSON.parse(localStorage.getItem('selectedCity'))
     : [])
 
-
   useEffect(() => {
     localStorage.setItem('selectedCity', JSON.stringify(selectedCity))
   }, [selectedCity])
-
 
   const addCity = cityName => {
     if ( !selectedCity.includes(cityName) ) {
@@ -28,7 +26,6 @@ function App() {
   }
 
   const removeCity = cityName => setSelectedCity( prev => prev.filter(city => city !== cityName) )
-
 
   return (
     <div className="App">
@@ -74,6 +71,5 @@ function App() {
     </div>
   )
 }
-
 
 export default App;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-
 const SelectedCity = ({ selectedCity, removeCity }) => {
   return (
     <div className='selected'>
@@ -29,6 +28,5 @@ const SelectedCity = ({ selectedCity, removeCity }) => {
     </div>
   );
 };
-
 
 export default SelectedCity;

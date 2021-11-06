@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const WeatherDetailList = ({ weatherList }) => {
   return (
     <ul className='weather__list'>
@@ -40,6 +39,5 @@ const WeatherDetailList = ({ weatherList }) => {
     </ul>
   )
 }
-
 
 export default WeatherDetailList;

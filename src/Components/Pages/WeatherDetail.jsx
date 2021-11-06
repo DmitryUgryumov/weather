@@ -3,7 +3,6 @@ import { Link, useParams, useRouteMatch, Switch, Route } from "react-router-dom"
 
 import WeatherDetailList from "../Weather/WeatherDetailList";
 
-
 const monthNames = [
   "January",
   "February",
@@ -19,7 +18,6 @@ const monthNames = [
   "December"
 ];
 
-
 const WeatherDetail = ({ apiKey }) => {
   const [error, setError] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -29,11 +27,9 @@ const WeatherDetail = ({ apiKey }) => {
   const currentURL = useParams()
   const current = currentURL.cityName
 
-
   useEffect(() => {
     weatherRequest(current)
   }, [])
-
 
   function weatherRequest(cityName) {
     const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&lang=en&appid=${apiKey}`
@@ -62,7 +58,6 @@ const WeatherDetail = ({ apiKey }) => {
         setIsLoaded(true)
       })
   }
-
 
   if (error) {
     return <div className='error'>
