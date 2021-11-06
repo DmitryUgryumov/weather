@@ -43,7 +43,7 @@ function App() {
 
           <li className='nav__item'>
             <Link className='nav__link' to='/selected'>
-              Selected
+              Selected cities
             </Link>
           </li>
 
@@ -53,7 +53,7 @@ function App() {
       <Context.Provider value={{ addCity, selectedCity }}>
         <Switch>
 
-          <Route exact path='/' >
+          <Route exact path='/weather' >
             <Home apiKey={apiKey}/>
           </Route>
 
