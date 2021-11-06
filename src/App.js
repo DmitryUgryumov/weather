@@ -13,7 +13,9 @@ const apiKey = "60881de5bfadd478bce737c02789308b";
 
 
 function App() {
-  const [selectedCity, setSelectedCity] = useState( JSON.parse(localStorage.getItem('selectedCity')) || [] )
+  const [selectedCity, setSelectedCity] = useState(localStorage.getItem('selectedCity')
+    ? JSON.parse(localStorage.getItem('selectedCity'))
+    : [])
 
 
   useEffect(() => {
@@ -23,11 +25,11 @@ function App() {
 
   const addCity = cityName => {
     if ( !selectedCity.includes(cityName) ) {
-      setSelectedCity(prev => [...prev, cityName] )
+      setSelectedCity( prev => [...prev, cityName] )
     }
   }
 
-  const removeCity = cityName => setSelectedCity(prev => prev.filter(city => city !== cityName) )
+  const removeCity = cityName => setSelectedCity( prev => prev.filter(city => city !== cityName) )
 
 
   return (
