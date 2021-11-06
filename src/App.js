@@ -40,7 +40,7 @@ function App() {
 
           <li className='nav__item'>
             <Link className='nav__link' to='/selected'>
-              Selected cities
+              Selected
             </Link>
           </li>
 
