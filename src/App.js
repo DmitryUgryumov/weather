@@ -8,9 +8,7 @@ import Context from "./Components/Context/Context";
 import Home from "./Components/Pages/Home";
 import WeatherDetail from "./Components/Pages/WeatherDetail";
 
-
 const apiKey = "60881de5bfadd478bce737c02789308b";
-
 
 function App() {
   const [selectedCity, setSelectedCity] = useState(localStorage.getItem('selectedCity')
