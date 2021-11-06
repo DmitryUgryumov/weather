@@ -10,6 +10,7 @@ import WeatherDetail from "./Components/Pages/WeatherDetail";
 
 const apiKey = "60881de5bfadd478bce737c02789308b";
 
+
 function App() {
   const [selectedCity, setSelectedCity] = useState(localStorage.getItem('selectedCity')
     ? JSON.parse(localStorage.getItem('selectedCity'))
