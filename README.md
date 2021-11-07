@@ -1,4 +1,4 @@
-# Open [Demo](https://dmitryugryumov.github.io/weather/) to view it in the browser.
+###### Open [Demo](https://dmitryugryumov.github.io/weather/) to view it in the browser.
 
 
 # Getting Started with Create React App
