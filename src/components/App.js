@@ -1,20 +1,21 @@
-import './index.css';
+import '../stylessheets/index.css';
 import { useEffect, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
-import SelectedCity from "./Components/Pages/SelectedCity";
-import Search from "./Components/Pages/Search";
-import Context from "./Components/Context/Context";
-import Home from "./Components/Pages/Home";
-import WeatherDetail from "./Components/Pages/WeatherDetail";
+import SelectedCity from "./Pages/SelectedCity";
+import Search from "./Pages/Search";
+import Context from "./Context/Context";
+import Home from "./Pages/Home";
+import WeatherDetail from "./Pages/WeatherDetail";
 
 const apiKey = "60881de5bfadd478bce737c02789308b";
 
-
 function App() {
-  const [selectedCity, setSelectedCity] = useState(localStorage.getItem('selectedCity')
-    ? JSON.parse(localStorage.getItem('selectedCity'))
-    : [])
+  const [selectedCity, setSelectedCity] = useState(
+    localStorage.getItem('selectedCity')
+      ? JSON.parse(localStorage.getItem('selectedCity'))
+      : []
+  )
 
   useEffect(() => {
     localStorage.setItem('selectedCity', JSON.stringify(selectedCity))
@@ -63,7 +64,7 @@ function App() {
             <SelectedCity selectedCity={selectedCity} removeCity={removeCity}/>
           </Route>
 
-          <Route path='/weather/:cityName'>
+          <Route path='/weather-detail/:cityName'>
             <WeatherDetail apiKey={apiKey}/>
           </Route>
 

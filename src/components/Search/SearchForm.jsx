@@ -23,9 +23,9 @@ const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) =
   function searchCity(e) {
     e.preventDefault()
 
-    if (inputValue === '') return
-
-    hist.push(`/search/city=${inputValue}`)
+    if (inputValue !== '') {
+      hist.push(`/search/city=${inputValue}`)
+    }
   }
 
   return (

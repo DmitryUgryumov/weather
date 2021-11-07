@@ -18,7 +18,7 @@ const WeatherCard = (props) => {
         </div>
 
         <div className='card__5-day'>
-          <Link to={`/weather/${props.cityName}/today+0day`}>
+          <Link to={`/weather-detail/${props.cityName}/today+0day`}>
             Weather for 5 days
           </Link>
         </div>

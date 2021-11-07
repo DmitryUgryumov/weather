@@ -72,10 +72,10 @@ const WeatherDetail = ({ apiKey }) => {
         <div className='weather__title'>
           <div className='weather__location'>
             <span className='weather__city'>
-              { cityInfo.city.name }
+              {cityInfo.city.name}
             </span>
             <span className='weather__country'>
-             ({ cityInfo.city.country })
+             ({cityInfo.city.country})
           </span>
           </div>
         </div>
@@ -99,7 +99,6 @@ const WeatherDetail = ({ apiKey }) => {
           </ul>
         </nav>
 
-
         <div className='weather__list-container'>
           <Switch>
             {
@@ -118,6 +117,5 @@ const WeatherDetail = ({ apiKey }) => {
     )
   }
 }
-
 
 export default WeatherDetail;

@@ -57,7 +57,7 @@ const Home = ({ apiKey }) => {
   } else {
     return (
       <>
-        <div className='home-title' >Weather forecast</div>
+        <div className='home-title'>Weather forecast</div>
         <div className='container'>
           <WeatherCard cityName={cityInfo.name} countryName={cityInfo.sys.country}
                        temp={cityInfo.main.temp} weatherDescription={cityInfo['weather'][0].description}
