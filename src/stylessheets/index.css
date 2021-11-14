@@ -47,7 +47,6 @@ html {
   cursor: pointer;
   transition: background-color 0.4s;
 }
-
 .nav__item:hover {
   background: blue;
 }
@@ -88,7 +87,6 @@ html {
   font-size: 20px;
   background: none;
 }
-
 .search__input:focus {
   outline: none;
 }
@@ -102,22 +100,17 @@ html {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .search__btn:hover {
   background: lightseagreen;
 }
-
 .search__btn:active {
   background: teal;
 }
 
 .error, .loading {
-  margin-top: 70px;
-}
-
-.error, .loading {
   text-align: center;
   font-size: 36px;
+  margin-top: 70px;
 }
 
 .error__text {
@@ -164,11 +157,9 @@ html {
   margin-top: 10px;
   font-size: 18px;
 }
-
 .card__5-day a {
   color: black;
 }
-
 .card__5-day a:hover {
   color: darkblue;
 }
@@ -221,11 +212,9 @@ html {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .btn__add:hover {
   background: lightseagreen;
 }
-
 .btn__add:active {
   background: teal;
 }
@@ -306,7 +295,6 @@ html {
   padding-left: 10px;
   transition: background-color 0.3s;
 }
-
 .selected__li:hover {
   background: lightblue;
 }
@@ -326,7 +314,6 @@ html {
   background: indianred;
   transition: background-color 0.3s;
 }
-
 .btn__remove:hover {
   background: darkred;
 }

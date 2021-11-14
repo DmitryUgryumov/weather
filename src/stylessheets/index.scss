@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -48,10 +49,10 @@ html {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color .4s;
-}
 
-.nav__item:hover {
-  background: blue;
+  &:hover {
+    background: blue;
+  }
 }
 
 .nav__item_active {
@@ -92,10 +93,10 @@ html {
   border: none;
   font-size: 20px;
   background: none;
-}
 
-.search__input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .search__btn {
@@ -106,25 +107,23 @@ html {
   border: none;
   cursor: pointer;
   transition: background-color .3s;
-}
 
-.search__btn:hover {
-  background: lightseagreen;
-}
+  &:hover {
+    background: lightseagreen;
+  }
 
-.search__btn:active {
-  background: rgb(0, 128, 128);
+  &:active {
+    background: rgb(0, 128, 128);
+  }
 }
 //search styles ends
 
 
 //'weather-card card' styles starts
 .error, .loading {
-  margin-top: 70px;
-}
-.error, .loading {
   text-align: center;
   font-size: 36px;
+  margin-top: 70px;
 }
 
 .error__text {
@@ -170,14 +169,14 @@ html {
   text-align: center;
   margin-top: 10px;
   font-size: 18px;
-}
 
-.card__5-day a {
-  color: black;
-}
+  a {
+    color: black;
 
-.card__5-day a:hover {
-  color:darkblue;
+    &:hover {
+      color:darkblue;
+    }
+  }
 }
 
 .card__temp-container {
@@ -227,14 +226,14 @@ html {
   border: none;
   cursor: pointer;
   transition: background-color .3s;
-}
 
-.btn__add:hover {
-  background: lightseagreen;
-}
+  &:hover {
+    background: lightseagreen;
+  }
 
-.btn__add:active {
-  background: rgb(0, 128, 128);
+  &:active {
+    background: rgb(0, 128, 128);
+  }
 }
 //'weather-card card' styles ends
 
@@ -318,10 +317,10 @@ html {
   align-items: center;
   padding-left: 10px;
   transition: background-color .3s;
-}
 
-.selected__li:hover {
-  background: lightblue;
+  &:hover {
+    background: lightblue;
+  }
 }
 
 .selected__link {
@@ -338,10 +337,10 @@ html {
   border: none;
   background: indianred;
   transition: background-color .3s;
-}
 
-.btn__remove:hover {
-  background: darkred;
+  &:hover {
+    background: darkred;
+  }
 }
 
 .selected__empty-value {

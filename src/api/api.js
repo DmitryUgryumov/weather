@@ -58,7 +58,7 @@ export function weatherRequestDetail(cityName, setCityInfo, setIsLoaded, setErro
       setCityInfo(json)
       setFiveDay(
         json.list
-          .map(weatherItem => weatherItem['dt_txt']
+          .map(weatherItem => weatherItem.dt_txt
             .slice(5, 10)
             .split('-'))
           .filter((date, ind, arr) => ind !== 0 ? date[1] !== arr[ind - 1][1] : true)
@@ -66,7 +66,7 @@ export function weatherRequestDetail(cityName, setCityInfo, setIsLoaded, setErro
             month: date[0],
             day: date[1],
             weatherList: json.list
-              .filter(weatherItem => weatherItem['dt_txt'].slice(8, 10) === date[1])
+              .filter(weatherItem => weatherItem.dt_txt.slice(8, 10) === date[1])
           }))
       )
       setIsLoaded(true)
