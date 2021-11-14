@@ -67,8 +67,7 @@ export function weatherRequestDetail(cityName, setCityInfo, setIsLoaded, setErro
           .map(date => ({
             month: date[0],
             day: date[1],
-            weatherList: json
-              .list
+            weatherList: json.list
               .filter(weatherItem => weatherItem['dt_txt'].slice(8, 10) === date[1])
           }))
       )

@@ -9,7 +9,7 @@ const WeatherDetailList = ({ weatherList }) => {
             <li  className='weather__list-item' key={ weatherItem.dt }>
 
               <div className='weather__list-info'>
-                { weatherItem['dt_txt'].slice(11, 16) }
+                { weatherItem.dt_txt.slice(11, 16) }
               </div>
 
               <div className='weather__list-info weather__temp'>
@@ -21,7 +21,7 @@ const WeatherDetailList = ({ weatherList }) => {
               </div>
 
               <div className='weather__list-info'>
-                { weatherItem['weather'][0].description }
+                { weatherItem.weather[0].description }
               </div>
 
               <div className='weather__list-info'>
@@ -29,7 +29,7 @@ const WeatherDetailList = ({ weatherList }) => {
               </div>
 
               <div className='weather__list-info'>
-                <p>Feels like: { Math.round(weatherItem.main['feels_like']  - 273) }°C</p>
+                <p>Feels like: { Math.round(weatherItem.main.feels_like  - 273) }°C</p>
               </div>
 
             </li>

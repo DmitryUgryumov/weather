@@ -42,8 +42,8 @@ const Home = () => {
       <div className='home-title'>Weather forecast</div>
       <div className='container'>
         <WeatherCard cityName={cityInfo.name} countryName={cityInfo.sys.country}
-                     temp={cityInfo.main.temp} weatherDescription={cityInfo['weather'][0].description}
-                     icon={cityInfo['weather'][0].icon} wind={cityInfo.wind.speed} feelsLike={cityInfo.main['feels_like']}
+                     temp={cityInfo.main.temp} weatherDescription={cityInfo.weather[0].description}
+                     icon={cityInfo.weather[0].icon} wind={cityInfo.wind.speed} feelsLike={cityInfo.main.feels_like}
         />
       </div>
     </>

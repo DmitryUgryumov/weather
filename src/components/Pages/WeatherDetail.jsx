@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Link, useParams, useRouteMatch, Switch, Route } from 'react-router-dom'
 
 import { weatherRequestDetail } from '../../api/api'
