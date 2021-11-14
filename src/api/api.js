@@ -47,7 +47,6 @@ export function weatherRequestSearch(cityName, setCityInfo, setIsLoaded, setErro
 export function weatherRequestDetail(cityName, setCityInfo, setIsLoaded, setError, setFiveDay) {
   const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&lang=en&appid=${apiKey}`
 
-  console.log(true)
   fetch(URL)
     .then(data => {
         return data.ok
@@ -56,7 +55,6 @@ export function weatherRequestDetail(cityName, setCityInfo, setIsLoaded, setErro
       }
     )
     .then(json => {
-      console.log(json)
       setCityInfo(json)
       setFiveDay(
         json.list
