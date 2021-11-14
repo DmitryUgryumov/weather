@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 
-const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) => {
+import { weatherRequestSearch } from '../../api/api'
+
+const SearchForm = ({ setError, setCityInfo, setIsRequested, setIsLoaded }) => {
   const [inputValue, setInputValue] = useState('')
   const hist = useHistory()
   const currentURL = useParams()
@@ -12,7 +14,7 @@ const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) =
     setInputValue(city)
 
     if (city) {
-      weatherRequest(city)
+      weatherRequestSearch(city, setCityInfo, setIsLoaded, setError, setIsRequested)
     } else {
       setError(false)
       setIsRequested(false)
@@ -40,4 +42,4 @@ const SearchForm = ({ weatherRequest, setError, setCityInfo, setIsRequested }) =
   )
 }
 
-export default SearchForm;
+export default SearchForm

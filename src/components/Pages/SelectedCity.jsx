@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SelectedCity = ({ selectedCity, removeCity }) => {
   return (
@@ -29,4 +29,4 @@ const SelectedCity = ({ selectedCity, removeCity }) => {
   );
 };
 
-export default SelectedCity;
+export default SelectedCity

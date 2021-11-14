@@ -1,14 +1,13 @@
-import '../stylessheets/index.css';
-import { useEffect, useState } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import '../stylessheets/index.css'
 
-import SelectedCity from "./Pages/SelectedCity";
-import Search from "./Pages/Search";
-import Context from "./Context/Context";
-import Home from "./Pages/Home";
-import WeatherDetail from "./Pages/WeatherDetail";
+import { useEffect, useState } from 'react'
+import { Switch, Route, Link } from 'react-router-dom'
 
-const apiKey = "60881de5bfadd478bce737c02789308b";
+import SelectedCity from './Pages/SelectedCity'
+import Search from './Pages/Search'
+import Context from './Context/Context'
+import Home from './Pages/Home'
+import WeatherDetail from './Pages/WeatherDetail'
 
 function App() {
   const [selectedCity, setSelectedCity] = useState(
@@ -53,11 +52,11 @@ function App() {
         <Switch>
 
           <Route exact path='/weather' >
-            <Home apiKey={apiKey}/>
+            <Home/>
           </Route>
 
           <Route path='/search/:cityName'>
-            <Search apiKey={apiKey}/>
+            <Search/>
           </Route>
 
           <Route path='/selected'>
@@ -65,7 +64,7 @@ function App() {
           </Route>
 
           <Route path='/weather-detail/:cityName'>
-            <WeatherDetail apiKey={apiKey}/>
+            <WeatherDetail/>
           </Route>
 
         </Switch>
@@ -74,4 +73,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

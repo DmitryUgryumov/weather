@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
-import Context from "../Context/Context";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+
+import Context from '../Context/Context'
 
 const WeatherCard = (props) => {
   const { addCity, selectedCity } = useContext(Context)
@@ -43,4 +44,4 @@ const WeatherCard = (props) => {
   )
 }
 
-export default WeatherCard;
+export default WeatherCard

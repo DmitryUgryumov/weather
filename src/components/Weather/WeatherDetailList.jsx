@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const WeatherDetailList = ({ weatherList }) => {
   return (
@@ -40,4 +40,4 @@ const WeatherDetailList = ({ weatherList }) => {
   )
 }
 
-export default WeatherDetailList;
+export default WeatherDetailList
