@@ -15,7 +15,7 @@ html {
 }
 
 .container {
-  max-width: 370px;
+  max-width: 400px;
   margin: 50px auto 0;
 }
 
@@ -36,13 +36,13 @@ html {
 }
 .nav__list {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 20px 30px;
   align-items: center;
+  padding: 0 20px;
 }
 
-.nav__item + .nav__item {
-  margin-left: 30px;
-}
 
 .nav__item {
   background: royalblue;
@@ -76,10 +76,11 @@ html {
   display: flex;
   justify-content: center;
   margin-top: 70px;
+  padding: 0 20px;
 }
 
 .search__form {
-  flex-basis: 300px;
+  max-width: 300px;
   display: flex;
   align-items: center;
   border: 1px gray solid;
@@ -88,7 +89,7 @@ html {
 }
 
 .search__input {
-  flex-basis: 270px;
+  max-width: 77%;
   padding: 5px 2px;
   border: none;
   font-size: 20px;
@@ -100,7 +101,7 @@ html {
 }
 
 .search__btn {
-  margin-left: 20px;
+  //margin-left: 20px;
   font-size: 18px;
   padding: 5px;
   background: rgb(0, 128, 128);
@@ -134,6 +135,7 @@ html {
   display: flex;
   justify-content: left;
   align-items: center;
+  padding: 0 10px;
 }
 
 .card-container {
@@ -257,10 +259,14 @@ html {
   margin-top: 15px;
 }
 
+.weather__list-container {
+  padding: 0 20px;
+}
+
 .weather__list {
   display: flex;
-  max-width: 880px;
-  gap: 30px 26px;
+  max-width: 920px;
+  gap: 30px 40px;
   justify-content: left;
   flex-wrap: wrap;
   overflow: hidden;
@@ -299,6 +305,10 @@ html {
 
 
 //selected styles starts
+.selected {
+  padding: 0 10px;
+}
+
 .selected__ul {
   display: flex;
   flex-direction: column;
@@ -349,3 +359,34 @@ html {
   margin-top: 70px;
 }
 //selected styles ends
+
+
+//media query styles starts
+@media (max-width: 998px) {
+  .weather__list {
+    max-width: 700px;
+    gap:30px 7%;
+  }
+}
+
+@media (max-width: 764px) {
+  .weather__list {
+    justify-content: space-between;
+    max-width: 450px;
+    gap:30px 50px;
+  }
+}
+
+@media (max-width: 580px) {
+  .weather {
+    .nav__list {
+      flex-direction: column;
+    }
+  }
+
+  .weather__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+//media query styles ends
