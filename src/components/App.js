@@ -1,7 +1,7 @@
 import '../stylessheets/index.css'
 
 import { useEffect, useState } from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Route, Link, HashRouter } from 'react-router-dom'
 
 import SelectedCity from './Pages/SelectedCity'
 import Search from './Pages/Search'
@@ -49,14 +49,14 @@ function App() {
       </nav>
 
       <Context.Provider value={{ addCity, selectedCity }}>
-        <Switch>
+        <HashRouter basename='/'>
 
-          <Route exact path='/weather' >
-            <Home/>
+          <Route exact path='/'>
+            <Home />
           </Route>
 
           <Route path='/search/:cityName'>
-            <Search/>
+            <Search />
           </Route>
 
           <Route path='/selected'>
@@ -64,10 +64,10 @@ function App() {
           </Route>
 
           <Route path='/weather-detail/:cityName'>
-            <WeatherDetail/>
+            <WeatherDetail />
           </Route>
 
-        </Switch>
+        </HashRouter>
       </Context.Provider>
     </div>
   )
