@@ -1,13 +1,14 @@
-import '../stylessheets/index.css'
-
 import { useEffect, useState } from 'react'
-import { Route, Link, HashRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+
+import '../stylessheets/index.css'
 
 import SelectedCity from './Pages/SelectedCity'
 import Search from './Pages/Search'
 import Context from './Context/Context'
 import Home from './Pages/Home'
 import WeatherDetail from './Pages/WeatherDetail'
+import HeaderNav from "./Header/HeaderNav";
 
 function App() {
   const [selectedCity, setSelectedCity] = useState(
@@ -30,28 +31,11 @@ function App() {
 
   return (
     <div className="App">
-      <nav className='nav'>
-        <ul className='nav__list' >
-
-          <li className='nav__item'>
-            <Link className='nav__link' to='/search/city='>
-              Search
-            </Link>
-          </li>
-
-          <li className='nav__item'>
-            <Link className='nav__link' to='/selected'>
-              Selected
-            </Link>
-          </li>
-
-        </ul>
-      </nav>
-
+      <HeaderNav />
       <Context.Provider value={{ addCity, selectedCity }}>
-        <HashRouter basename='/'>
+        <Switch>
 
-          <Route exact path='/'>
+          <Route exact path='/weather'>
             <Home />
           </Route>
 
@@ -67,7 +51,7 @@ function App() {
             <WeatherDetail />
           </Route>
 
-        </HashRouter>
+        </Switch>
       </Context.Provider>
     </div>
   )

@@ -5,7 +5,6 @@ const WeatherDetailList = ({ weatherList }) => {
     <ul className='weather__list'>
       {
         weatherList.map(weatherItem =>
-          (
             <li  className='weather__list-item' key={ weatherItem.dt }>
 
               <div className='weather__list-info'>
@@ -31,9 +30,7 @@ const WeatherDetailList = ({ weatherList }) => {
               <div className='weather__list-info'>
                 <p>Feels like: { Math.round(weatherItem.main.feels_like  - 273) }°C</p>
               </div>
-
             </li>
-          )
         )
       }
     </ul>

@@ -33,10 +33,13 @@ const SearchForm = ({ setError, setCityInfo, setIsRequested, setIsLoaded }) => {
   return (
     <div className='search'>
       <form className='search__form' onSubmit={searchCity}>
-        <input className='search__input' type="text" placeholder='Write city' value={inputValue} onChange={ e => setInputValue(e.target.value) }/>
-        <button type='submit' className='search__btn'>
-          search
-        </button>
+        <input
+          className='search__input'
+          type="text" placeholder='Write city'
+          value={inputValue}
+          onChange={ e => setInputValue(e.target.value) }
+        />
+        <button type='submit' className='search__btn'>search</button>
       </form>
     </div>
   )

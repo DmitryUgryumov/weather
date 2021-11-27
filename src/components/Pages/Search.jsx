@@ -39,12 +39,7 @@ const Search = () => {
     )
   }
 
-  return (
-    <div>
-      {searchForm}
-    </div>
-  )
-
+  return <div>{searchForm}</div>
 }
 
 export default Search

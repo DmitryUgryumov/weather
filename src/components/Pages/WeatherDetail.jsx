@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams, useRouteMatch, Switch, Route } from 'react-router-dom'
 
 import { weatherRequestDetail } from '../../api/api'
+
 import WeatherDetailList from '../Weather/WeatherDetailList'
 
 const monthNames = [
@@ -17,7 +18,7 @@ const monthNames = [
   "October",
   "November",
   "December"
-];
+]
 
 const WeatherDetail = () => {
   const [error, setError] = useState(false)
@@ -33,9 +34,11 @@ const WeatherDetail = () => {
   }, [])
 
   if (error) {
-    return <div className='error'>
-      <p className='error__text'>Error: {`"${current}" ${error}`}</p>
-    </div>
+    return (
+      <div className='error'>
+        <p className='error__text'>Error: {`"${current}" ${error}`}</p>
+      </div>
+    )
   } else if (!isLoaded) {
     return <div className='loading'>Loading...</div>
   }
@@ -57,7 +60,7 @@ const WeatherDetail = () => {
       <nav className='nav nav-weather'>
         <ul className='nav__list'>
           {
-            fiveDay.map((date, ind) => (
+            fiveDay.map((date, ind) =>
               <li key={date.day} className={window.location.href.includes(`+${ind}`) ? 'nav__item nav__item_active' : 'nav__item'}>
                 <Link className='nav__link'  to={`${url}/today+${ind}day`}>
                   {
@@ -67,7 +70,6 @@ const WeatherDetail = () => {
                   }
                 </Link>
               </li>
-              )
             )
           }
         </ul>
